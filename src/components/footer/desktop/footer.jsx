@@ -31,7 +31,7 @@ const handleCopy = () => {
                         <i class="bi bi-instagram"></i>
                         <i class="bi bi-whatsapp"></i>
                     </div>
-                    <img src="../../../images/marcablack.svg" alt="" />
+                    <img src="/clickcat/marcablack.svg" alt="" />
                 </div>
                 <div className="footerItem">
                     <span className="footerTitle">
