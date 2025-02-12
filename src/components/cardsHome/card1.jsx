@@ -41,7 +41,7 @@ const Card1 = ({ nome }) => {
                     </div>
                 </div>
                 <div className="cardImage">
-                    <img src="/clickat/cat1.svg" alt="" />
+                    <img src="/clickcat/cat1.svg" alt="Adote" />
                 </div>
                 <div className="cardNext" onClick={toggle}>
                     <i class="bi bi-arrow-right-circle-fill"></i>

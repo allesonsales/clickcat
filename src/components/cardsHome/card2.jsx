@@ -18,7 +18,7 @@ const Card2 = ({ toggle, togglePrevious }) => {
                     </div>
                 </div>
                 <div className="cardImage">
-                    <img src="/cat2.svg" alt="" />
+                    <img src="/clickcat/cat2.svg" alt="Adote" />
                 </div>
                 <div className="cardNext" onClick={toggle}>
                     <i class="bi bi-arrow-right-circle-fill"></i>
