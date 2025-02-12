@@ -1,0 +1,50 @@
+footer {
+    background-color: #FFC800;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+}
+
+.footerItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footerItem a, .footerItem .bi {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: .8rem;
+}
+
+.footerItem .bi {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.footerItem a:hover, .footerItem .bi:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.footerItem img {
+    width: 100px;
+}
+
+.footerTitle {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.footerSocial {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}

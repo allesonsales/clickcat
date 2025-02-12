@@ -1,0 +1,87 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.cardContainer {
+    display: flex;
+    gap: 4rem;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 480px;
+    color: #59656F;
+    font-size: 2rem;
+}
+
+.cardTitle {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #9C528B;
+}
+
+.cardTitle b {
+    color: #FFC800;
+}
+
+.adoto {
+    background-color: #9C528B;
+    border: none;
+    padding: .8rem;
+    width: 50%;
+    color: white;
+    font-family: "montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    cursor: pointer;
+    align-self: center;
+    border-radius: 35px;
+    transition: ease-in-out .2s;
+}
+
+.adoto:hover {
+    background-color: #FFC800;
+    color: #59656F;
+    transition: ease-in-out .2s;
+}
+
+.cardImage {
+    width: 350px;
+    transform: translateY(20%);
+}
+
+.cardNext {
+    align-content: center;
+}
+
+.cardNext .bi {
+    color: #9C528B;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.cardNext .bi:hover {
+    color: #FFC800;
+}
+
+.cardPrevious {
+    align-content: center;
+}
+
+.cardPrevious .bi {
+    color: #9C528B;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.cardPrevious .bi:hover {
+    color: #FFC800;
+}

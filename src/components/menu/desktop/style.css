@@ -1,0 +1,36 @@
+.MenuDesk {
+    background-color: #9C528B;
+    width: 100vw;
+    color: white;
+}
+
+.menuContainer {
+    display: flex;
+    padding: 1rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer {
+    width: 150px;
+}
+
+.MenuList {
+    display: flex;
+    gap: 5rem;
+    font-size: 1.2rem;
+}
+
+.MenuList a {
+    color: white;
+    text-decoration: none;
+    padding: .5rem;
+    font-weight: 600;
+}
+
+.MenuList a:hover {
+    background-color: #f8b406;
+    color: #1D1E2C;
+    border-radius: 15px;
+    transition: ease-in-out .3s;
+}
