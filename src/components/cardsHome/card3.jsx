@@ -20,7 +20,7 @@ const Card3 = ({ togglePrevious }) => {
                     </Link>
                 </div>
                 <div className="cardImage">
-                    <img src="/clickcat/cat3.svg" alt="Adote" />
+                    <img src="/clickca/cat3.svg" alt="Adote" />
                 </div>
             </div>
         </section>
