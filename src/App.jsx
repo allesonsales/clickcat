@@ -21,8 +21,8 @@ function App() {
     <>
       <Router>
       <MenuDesk />
-      <Card1 nome={Name}/>
       <Routes>
+      <Card1 nome={Name}/>
         <Route path="/cats" element={<Cats/>} />
         <Route path="/doar" element={<Doar/>} />
         <Route path="/ajudar" element={<Ajudar/>} />
