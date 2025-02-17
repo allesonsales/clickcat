@@ -1,29 +1,39 @@
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import './style.css'
+import Termo from '../../../pages/termo/termo';
 
 const Footer = () => {
+    
+    const [modalTermoOpen, setModalTermoOpen] = useState(false)
 
-const handleCopy = () => {
-    const currentUrl = window.location.href;
-    navigator.clipboard.writeText(currentUrl)
-    .then(() => {
-        alert('Link copiado com sucesso')
-    })
+    const handleCopy = () => {
+        const currentUrl = window.location.href;
+        navigator.clipboard.writeText(currentUrl)
+        .then(() => {
+            alert('Link copiado com sucesso')
+        })
 }
+
+    const openModalTermo = () => setModalTermoOpen(true)
+    const closeModalTermo = () => setModalTermoOpen(false)
 
     return (
         <footer>
             <div className="footerContainer">
                 <div className="footerItem">
-                    <span className="footerTitle">
+                    <p className="footerTitle">
                         Adoção
-                    </span>
-                    <a href="#">Termo de Adoção</a>
+                    </p>              
+                    <span onClick={openModalTermo}>Termo de Adoção</span>
                 </div>
                 <div className="footerItem">
-                    <span className="footerTitle">
+                    <p className="footerTitle">
                         Doar
-                    </span>
-                    <a href="#">Cadastrar um Gatito</a>
+                    </p>
+                    <Link to="doar">
+                    <span>Cadastrar um Gatito</span>
+                    </Link>
                 </div>
                 <div className="footerItem">
                     <div className="footerSocial">
@@ -34,18 +44,21 @@ const handleCopy = () => {
                     <img src="/clickcat/marcablack.svg" alt="" />
                 </div>
                 <div className="footerItem">
-                    <span className="footerTitle">
+                    <p className="footerTitle">
                         Colabore
-                    </span>
-                    <a href="#">Doar valor</a>
+                    </p>
+                    <Link to="ajudar">
+                        <span>Doar valor</span>
+                    </Link>
                 </div>
                 <div className="footerItem">
-                    <span className="footerTitle">
+                    <p className="footerTitle">
                         Divulgue
-                    </span>
+                    </p>
                     <i class="bi bi-send" onClick={handleCopy}></i>
                 </div>
             </div>
+            {modalTermoOpen && <Termo modalTermoOpen={modalTermoOpen} closeModalTermo={closeModalTermo} />}
         </footer>
     )
 }

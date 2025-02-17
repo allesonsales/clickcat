@@ -9,6 +9,7 @@ const MenuDesk = () => {
                     <img src="/clickcat/marca.svg" alt="" />
                 </div>
                 <div className="MenuList">
+                    <Link to="/clickcat">Home</Link>
                     <Link to="/cats">Gatitos</Link>
                     <Link to="/doar">Doar</Link>
                     <Link to="/ajudar">Ajudar</Link>

@@ -3,33 +3,40 @@ import { useEffect } from 'react'
 import './App.css'
 import MenuDesk from './components/menu/desktop/menudesk'
 import Footer from './components/footer/desktop/footer'
-import Card1 from './components/cardsHome/card1'
-import Cats from './pages/cats/cats'
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
-import Doar from './pages/doar/doar'
-import Ajudar from './pages/ajudar/ajudar'
+import { BrowserRouter as Router, useLocation } from 'react-router-dom'
+import AppRoute from './route'
+
 
 function App() {
   const [Name, setName] = useState(null)
+  const [cat, setCat] = useState([]);
 
   useEffect(() => {
-    const nome = window.prompt('Olá, Diga seu nome:');
-    /^[A-Za-z\s]+$/.test(nome) ? (setName(nome)) : (alert('Nome Inválido! Digite apenas letras.'))
-  },[])
+    let nome = window.prompt('Olá, Diga seu nome:');
+    while (!/^[A-Za-z\s]+$/.test(nome)) {
+      alert('Nome Inválido')
+      nome = window.prompt('Olá, Diga seu nome:');
+    }
+    setName(nome)
+  },[]);
+
+  const addCats = (newCat) => {
+    setCat((prevCats) => [...prevCats, newCat])
+  };
+
+
 
   return (
     <>
-      <Router>
-      <MenuDesk />
-      <Card1 nome={Name}/>
-      <Routes>
-        <Route path="/cats" element={<Cats/>} />
-        <Route path="/doar" element={<Doar/>} />
-        <Route path="/ajudar" element={<Ajudar/>} />
-      </Routes>
-      <Footer />
-      </Router>
-   
+      <div className="app-container">
+        <Router>
+          <MenuDesk />
+          <div className="app-content">
+            <AppRoute nome={Name} addCats={addCats} cat={cat}/>
+          </div>
+            <Footer />
+        </Router>
+      </div>
     </>
   )
 }

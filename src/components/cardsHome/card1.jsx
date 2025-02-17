@@ -26,6 +26,7 @@ const Card1 = ({ nome }) => {
         )
     }
 
+
     return (
         showCard === 1 ? (
             <section id='card1'>
