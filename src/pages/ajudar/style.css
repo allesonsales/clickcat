@@ -1,0 +1,53 @@
+.ajudarContainer {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    font-family: 'montserrat' sans-serif;
+    color: #9C528B;
+}
+
+.qrcode {
+    width: 500px;
+    height: 300px;
+}
+
+.qrcode img {
+    width: 100%;
+    height: 100%;
+}
+
+.ajudarContainer span {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.socialItem {
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+    color: #9C528B;
+}
+
+.socialItem .bi {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .ajudarContainer {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .qrcode {
+        display: none;
+    }
+    
+}

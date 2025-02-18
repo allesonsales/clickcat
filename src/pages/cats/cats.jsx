@@ -6,7 +6,8 @@ import Footer from '../../components/footer/desktop/footer';
 const Cats = ({cat}) => {
     const [catList, setCatlist] = useState(null);
     const [modalOpen, setModalopen] = useState(false);
-    const [selectedCat, setSelectedCat]= useState(null)
+    const [selectedCat, setSelectedCat]= useState(null);
+    const [adopt, setAdopt] = useState(false);
 
     useEffect(()=> {
         if (catsList){
@@ -23,6 +24,14 @@ const Cats = ({cat}) => {
 
     const closeModal = () => {
         setModalopen(false)
+    }
+
+    const openAdopt = () => {
+      setAdopt(true)
+    }
+
+    const closeAdopt = () => {
+      setAdopt(false)
     }
 
     return (
@@ -59,12 +68,29 @@ const Cats = ({cat}) => {
                 <span>História:</span><p> {selectedCat.historia}</p>
                 <span>Temperamento</span><p> {selectedCat.caracteristicas.join(', ')}</p>
                 <div className="buttons">
-                <button className='adoto'>Eu topo!</button>
+                  <button className='adoptCat' onClick={openAdopt}>Eu topo!</button>
+                  <button className='closeCat' onClick={closeModal}>Fechar</button>
                 </div>
-                <button onClick={closeModal}>Fechar</button>
               </div>
             </div>
           )}
+
+          {adopt && (
+            <div className="modalBackground" onClick={closeAdopt}>
+              <div className="adoptContent">
+                <div className="adoptContentText">
+                  <h2>Parabéns!! </h2>
+                  <div className="adoptcontentTextitem">
+                    <span>Você acabou de receber muito amor e carinho!</span>
+                    <i class="bi bi-chat-heart-fill"></i>
+                  </div>
+                </div>
+                <button onClick={closeAdopt, closeModal}>Fechar</button>
+              </div>
+            </div>
+          )}
+
+
         </div>
       );
     };

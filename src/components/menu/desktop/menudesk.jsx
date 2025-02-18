@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './style.css'
+import MenuMobile from '../mobile/menumobile'
 
 const MenuDesk = () => {
     return (
@@ -10,10 +11,11 @@ const MenuDesk = () => {
                 </div>
                 <div className="MenuList">
                     <Link to="/clickcat">Home</Link>
-                    <Link to="/cats">Gatitos</Link>
+                    <Link to="/cats">Adotar</Link>
                     <Link to="/doar">Doar</Link>
                     <Link to="/ajudar">Ajudar</Link>
                 </div>
+                <MenuMobile />
             </div>
         </nav>
     )

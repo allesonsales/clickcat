@@ -2,7 +2,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    padding: 2rem;
 }
 
 .cardContainer {
@@ -12,12 +12,20 @@ section {
 
 .cardContent {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
+    padding: 2rem;
     gap: 1rem;
-    width: 480px;
     color: #59656F;
     font-size: 2rem;
+}
+
+.cardContentText {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .cardTitle {
@@ -53,8 +61,8 @@ section {
     transition: ease-in-out .2s;
 }
 
-.cardImage {
-    width: 350px;
+.cardImage img {
+    width: 18rem;
     transform: translateY(20%);
 }
 
@@ -84,4 +92,35 @@ section {
 
 .cardPrevious .bi:hover {
     color: #FFC800;
+}
+
+@media (max-width: 768px) {
+    .cardContainer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .cardContent {
+        flex-direction: column;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0;
+    }
+
+    .cardContentText {
+        width: fit-content;
+        gap: .5rem;
+    }
+
+    .cardContent img {
+        width: 15rem;
+    }
+
+    .cardTitle {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
 }

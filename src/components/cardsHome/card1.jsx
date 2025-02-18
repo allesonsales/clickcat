@@ -32,17 +32,19 @@ const Card1 = ({ nome }) => {
             <section id='card1'>
             <div className="cardContainer">
                 <div className="cardContent">
-                    <div className="cardTitle">
-                        <span>Olá, <b>{nome ? (nome) : ('Visitante')}</b></span>
-                        Por que adotar?
+                    <div className="cardContentText">
+                        <div className="cardTitle">
+                            <span>Olá, <b>{nome ? (nome) : ('Visitante')}</b></span>
+                            Por que adotar?
+                        </div>
+                        <div className="cardText">
+                            Existem milhares de gatinhos
+                            esperando um humano para chamar de seu.
+                        </div>
                     </div>
-                    <div className="cardText">
-                        Existem milhares de gatinhos
-                        esperando um humano para chamar de seu.
+                    <div className="cardImage">
+                        <img src="/clickcat/cat1.svg" alt="" />
                     </div>
-                </div>
-                <div className="cardImage">
-                    <img src="/clickcat/cat1.svg" alt="" />
                 </div>
                 <div className="cardNext" onClick={toggle}>
                     <i class="bi bi-arrow-right-circle-fill"></i>

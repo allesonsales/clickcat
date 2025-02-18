@@ -34,3 +34,19 @@
     border-radius: 15px;
     transition: ease-in-out .3s;
 }
+
+.MenuMobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .MenuList {
+        display: none;
+    }
+
+
+    .MenuMobile {
+        display: flex;
+    }
+    
+}

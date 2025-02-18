@@ -21,19 +21,21 @@ const Footer = () => {
     return (
         <footer>
             <div className="footerContainer">
-                <div className="footerItem">
-                    <p className="footerTitle">
-                        Adoção
-                    </p>              
-                    <span onClick={openModalTermo}>Termo de Adoção</span>
-                </div>
-                <div className="footerItem">
-                    <p className="footerTitle">
-                        Doar
-                    </p>
-                    <Link to="doar">
-                    <span>Cadastrar um Gatito</span>
-                    </Link>
+                <div className="itemLeft">
+                    <div className="footerItem" onClick={openModalTermo}>
+                        <p className="footerTitle">
+                            Adoção
+                        </p>              
+                        <span >Termo de Adoção</span>
+                    </div>
+                    <div className="footerItem">
+                        <Link to="doar">
+                        <p className="footerTitle">
+                            Doar
+                        </p>
+                        <span>Cadastrar um Gatito</span>
+                        </Link>
+                    </div>
                 </div>
                 <div className="footerItem">
                     <div className="footerSocial">
@@ -41,21 +43,23 @@ const Footer = () => {
                         <i class="bi bi-instagram"></i>
                         <i class="bi bi-whatsapp"></i>
                     </div>
-                    <img src="/clickcat/marcablack.svg" alt="" />
+                    <img className="marcablack" src="/clickcat/marcablack.svg" alt="ClickCat" />
                 </div>
-                <div className="footerItem">
-                    <p className="footerTitle">
-                        Colabore
-                    </p>
-                    <Link to="ajudar">
-                        <span>Doar valor</span>
-                    </Link>
-                </div>
-                <div className="footerItem">
-                    <p className="footerTitle">
-                        Divulgue
-                    </p>
-                    <i class="bi bi-send" onClick={handleCopy}></i>
+                <div className="itemRight">
+                    <div className="footerItem">
+                        <Link to="ajudar">
+                        <p className="footerTitle">
+                            Colabore
+                        </p>
+                            <span>Doar valor</span>
+                        </Link>
+                    </div>
+                    <div className="footerItem" onClick={handleCopy}>
+                        <p className="footerTitle">
+                            Divulgue
+                        </p>
+                        <i class="bi bi-send"></i>
+                    </div>
                 </div>
             </div>
             {modalTermoOpen && <Termo modalTermoOpen={modalTermoOpen} closeModalTermo={closeModalTermo} />}

@@ -1,9 +1,11 @@
 .containerList {
     display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     align-items: center;
     justify-content: space-evenly;
-    height: 70vh;
     width: 100vw;
+    padding: 2rem;
 }
 
 .catContainer {
@@ -82,6 +84,33 @@ a {
     
 }
 
+.modalContent .buttons {
+    display: flex;
+    gap: .5rem;
+}
+
+.modalContent .buttons .adoptCat {
+    border-radius: 2px;
+    font-size: 1rem;
+    background-color: #FFC800;
+    color: black;
+    transition: ease-in-out .3s;
+}
+
+.modalContent .buttons .adoptCat:hover {
+    transform: scale(1.1);
+    transition: ease-in-out .3s;
+}
+
+.modalContent .buttons .closeCat {
+    background-color: #9C528B;
+    color: white;
+}
+
+.modalContent .buttons .closeCat:hover {
+    transform: translate(1.1);
+}
+
 .modalContent span {
     font-weight: 800;
     color: #9C528B;
@@ -97,4 +126,41 @@ a {
     object-fit: cover;
     object-position: center;
     border-radius: 100%;
+}
+
+.adoptContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: white;
+    color: #9C528B;
+    border-radius: 25px;
+    padding: 4rem 2rem;
+    margin: 1.5rem;
+    text-align: center;
+}
+
+.adoptContentText {
+    font-size: 1.5rem;
+}
+
+.adoptcontentTextitem {
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.adoptContent button {
+    background-color: #9C528B;
+    color: white;
+    border: none;
+    padding: .5rem;
+    width: 100px;
+    cursor: pointer;
+}
+
+.adoptContent button:hover {
+    background-color: #FFC800;
+    color: rgb(28, 28, 28);
 }

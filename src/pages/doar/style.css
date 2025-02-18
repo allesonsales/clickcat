@@ -3,11 +3,13 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 70vh;
+    height: 100vh;
+    padding: 0 2rem;
 }
 
 #ajudar h2 {
     color: #9C528B;
+    text-align: center;
 }
 
 .formContent {

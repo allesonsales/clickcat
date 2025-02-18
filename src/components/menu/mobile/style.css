@@ -1,0 +1,32 @@
+.MenuMobile {
+    width: 25px;
+    height: 25px;
+}
+
+.MenuMobile .bi {
+    font-size: 1.5rem;
+}
+
+.MenuMobile ul {
+    background-color: #9C528B;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem;
+    gap: 2rem;
+    transform: translate(-80%, 3%);
+    position: relative;
+    z-index: 100;
+}
+
+.MenuMobile ul li {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #232426;
+}
+
+.MenuMobile a {
+    text-decoration: none;
+}

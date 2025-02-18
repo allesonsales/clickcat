@@ -1,32 +1,40 @@
 footer {
     background-color: #FFC800;
     width: 100vw;
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
 
 .footerContainer {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 4rem;
+    align-items: center;
+    padding: 2rem 6rem;
+}
+
+.itemLeft, .itemRight {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+    padding: 0 2rem;
 }
 
 .footerItem {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
 }
 
-.footerItem span, .footerItem .bi {
+.footerItem span,.footerItem p, .footerItem .bi {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.6);
     font-size: .9rem;
+    cursor: pointer;
 }
 
 .footerItem .bi {
     font-size: 1rem;
-    cursor: pointer;
 }
 
 .footerItem span:hover, .footerItem .bi:hover {
@@ -47,4 +55,30 @@ footer {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+}
+
+.marcablack {
+    margin-top: 1rem;
+}
+
+
+@media (max-width: 768px) {
+    .footerContainer {
+        padding: .5rem 1rem;
+        gap: 1rem;
+    }
+
+    .footerItem span {
+        display: none;
+    }
+
+    .itemLeft, .itemRight {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .itemRight {
+        align-items: flex-end;
+    }
 }
