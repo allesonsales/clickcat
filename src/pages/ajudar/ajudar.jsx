@@ -13,10 +13,10 @@ const Ajudar = () => {
                         Você quis dizer: <br /> "me contratar"?
                     </span>
                     <div className="socialItem">
-                        <a href="https://wa.me/5511966186601" target='blank'>
+                        <a href="https://www.instagram.com/allesonsales/" target='blank'>
                             <i class="bi bi-instagram"></i>            
                         </a>
-                        <a href='https://www.instagram.com/allesonsales/' target='blank'>
+                        <a href='https://wa.me/5511966186601' target='blank'>
                             <i class="bi bi-whatsapp"></i>
                         </a>
                         <a href='https://www.linkedin.com/in/allesonsales/' target='blank'>

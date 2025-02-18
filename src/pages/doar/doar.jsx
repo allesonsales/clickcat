@@ -64,7 +64,7 @@ const Doar = ({addCats}) => {
             <div className="formContent">
                 <div className="formContentText"> 
                     <label>Temperamento:</label>
-                    <small>Escolha até 3</small>
+                    <small>Escolha até 3 (segure o ctrl)</small>
                 </div>
                 <select name="Temperamento" multiple aria-label='temperamento, escolha 3' onChange={handleTemperamento} required>
                     <option value="Agitado">Agitado</option>
