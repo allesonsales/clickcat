@@ -40,6 +40,11 @@
     cursor: pointer;
 }
 
+.socialItem a {
+    text-decoration: none;
+    color: #9C528B;
+}
+
 @media (max-width: 768px) {
     .ajudarContainer {
         flex-direction: column;
