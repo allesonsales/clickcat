@@ -4,7 +4,7 @@ import { CatContext } from "../../context/CatContext";
 import { Context } from "../../context/UserContext";
 
 const Termo = ({ fecharModal }) => {
-  const { logado } = useContext(Context);
+  const { isAutenticado } = useContext(Context);
   const { cat } = useContext(CatContext);
   const { handleAdotar } = useContext(CatContext);
 
@@ -12,7 +12,7 @@ const Termo = ({ fecharModal }) => {
     <div className="modalBackground">
       <div className="modalContent">
         <i className="bi bi-x-circle-fill" onClick={() => fecharModal()}></i>
-        {logado ? (
+        {isAutenticado ? (
           <>
             <h2>Termo de Adoção</h2>
             <p>Compromissos do adotante: </p>

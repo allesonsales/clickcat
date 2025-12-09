@@ -54,7 +54,7 @@ function UserProvider({ children }) {
     setUser(data.user);
     console.log("usuario login", user);
     setIsAutenticado(true);
-    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("user", user);
   }
 
   async function handleRegistrar(dados) {

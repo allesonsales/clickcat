@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
 import styles from "./style.module.css";
 import { Context } from "../../context/UserContext";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const { handleLogin } = useContext(Context);
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -16,6 +18,10 @@ function Login() {
     };
 
     handleLogin(dados);
+  }
+
+  function irPara() {
+    navigate(`/registrar`);
   }
 
   return (
@@ -44,6 +50,9 @@ function Login() {
           </div>
           <button className="cadastrar" type="submit">
             Entrar
+          </button>
+          <button className="cadastrar" type="button" onClick={irPara}>
+            Cadastrar-se
           </button>
         </form>
       </div>

@@ -25,13 +25,15 @@
 
 .sectionGatos {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
 .sectionGatos span {
   width: 100%;
   color: var(--roxo);
+  text-align: center;
 }
 
 .sectionGatos ul {
@@ -52,7 +54,18 @@
 
 .sectionGatos ul li .containerLinks {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   gap: 1rem;
+}
+
+.sectionGatos button {
+  background-color: var(--amarelo);
+  border: none;
+  color: var(--roxo);
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 50%;
 }
 
 .usuarioDados a {
@@ -65,6 +78,7 @@
   text-decoration: none;
   text-align: center;
   border-bottom: none;
+  font-size: 0.8rem;
 }
 
 @media (min-width: 1024px) {

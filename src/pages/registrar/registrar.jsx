@@ -7,6 +7,7 @@ function Registrar() {
   const [nomeUsuario, setNomeUsuario] = useState("");
   const [email, setEmail] = useState("");
   const [telefone, setTelefone] = useState("");
+  const [verSenha, setVerSenha] = useState(null);
   const [senha, setSenha] = useState("");
   const [confirmarSenha, setConfirmarSenha] = useState("");
   const [erro, setErro] = useState("");
@@ -44,6 +45,22 @@ function Registrar() {
     handleRegistrar(usuario);
   }
 
+  function formatarTelefone(valor) {
+    valor = valor.replace(/\D/g, "");
+
+    if (valor.length > 11) valor = valor.slice(0, 11);
+
+    if (valor.length <= 10) {
+      return valor
+        .replace(/(\d{2})(\d)/, "($1) $2")
+        .replace(/(\d{4})(\d)/, "$1-$2");
+    }
+
+    return valor
+      .replace(/(\d{2})(\d)/, "($1) $2")
+      .replace(/(\d{5})(\d)/, "$1-$2");
+  }
+
   return (
     <>
       <section>
@@ -76,10 +93,12 @@ function Registrar() {
           <div className="formContent">
             <label htmlFor="telefone">Telefone:</label>
             <input
-              onChange={(e) => setTelefone(e.target.value)}
+              value={telefone}
+              onChange={(e) => setTelefone(formatarTelefone(e.target.value))}
               type="text"
               name="telefone"
-              placeholder="Informe seu número de telefone"
+              maxLength={15}
+              placeholder="(11)90000-000"
             />
           </div>
           <div className="formContent">
@@ -96,14 +115,30 @@ function Registrar() {
           </div>
           <div className="formContent">
             <label htmlFor="senha">Senha:</label>
-            <input
-              onChange={(e) => setSenha(e.target.value)}
-              className={erro == "senha" ? styles.erroInput : ""}
-              type="password"
-              name="senha"
-              placeholder="Crie uma senha (mínimo 6 caracteres)"
-              minLength={6}
-            />
+            <div className={styles.input}>
+              <input
+                onChange={(e) => setSenha(e.target.value)}
+                className={erro == "senha" ? styles.erroInput : ""}
+                type={verSenha === `mostrarSenha` ? `text` : `password`}
+                name="senha"
+                placeholder="Crie uma senha (mínimo 6 caracteres)"
+                minLength={6}
+              />
+              <i
+                className={`${
+                  verSenha === `mostrarSenha`
+                    ? "bi bi-eye-slash-fill"
+                    : "bi bi-eye-fill"
+                } ${styles.olho}`}
+                onClick={() => {
+                  if (verSenha == null) {
+                    setVerSenha(`mostrarSenha`);
+                  } else if (verSenha == `mostrarSenha`) {
+                    setVerSenha(null);
+                  }
+                }}
+              ></i>
+            </div>
             {erro === "senha" && (
               <span className={styles.erroSpan}>
                 Senha e senha de confirmação diferentes!
@@ -117,12 +152,28 @@ function Registrar() {
           </div>
           <div className="formContent">
             <label htmlFor="senha">Confirmar senha:</label>
-            <input
-              onChange={(e) => setConfirmarSenha(e.target.value)}
-              type="password"
-              name="confirmarSenha"
-              placeholder="Repita sua senha"
-            />
+            <div className={styles.input}>
+              <input
+                onChange={(e) => setConfirmarSenha(e.target.value)}
+                type={verSenha == `mostrarConfirmacao` ? `text` : `password`}
+                name="confirmarSenha"
+                placeholder="Repita sua senha"
+              />
+              <i
+                className={`${
+                  verSenha === `mostrarConfirmacao`
+                    ? "bi bi-eye-slash-fill"
+                    : "bi bi-eye-fill"
+                } ${styles.olho}`}
+                onClick={() => {
+                  if (verSenha == null) {
+                    setVerSenha(`mostrarConfirmacao`);
+                  } else if (verSenha == `mostrarConfirmacao`) {
+                    setVerSenha(null);
+                  }
+                }}
+              ></i>
+            </div>
             {erro === "senha" && (
               <span className={styles.erroSpan}>
                 Senha e senha de confirmação diferentes!

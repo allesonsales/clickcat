@@ -8,7 +8,7 @@ import { CatContext } from "../../context/CatContext";
 
 function MinhaConta() {
   const { user } = useContext(Context);
-  const { cat, setCat, handleExcluir, handleConcluir } = useContext(CatContext);
+  const { setCat, handleExcluir, handleConcluir } = useContext(CatContext);
   const [meusGatos, setMeusGatos] = useState(null);
   const [naoAdotados, setNaoAdotados] = useState(null);
   const [adotados, setAdotados] = useState(null);
@@ -61,13 +61,13 @@ function MinhaConta() {
                   {gato.nome}
                   <div className={styles.containerLinks}>
                     {gato.adotante && (
-                      <i
+                      <button
                         onClick={() => {
                           concluir(gato._id);
                         }}
                       >
                         Concluir Adoção para {gato.adotante.nome}
-                      </i>
+                      </button>
                     )}
                     <Link
                       to={`/cats/editar/${gato._id}`}

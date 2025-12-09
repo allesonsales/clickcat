@@ -27,3 +27,16 @@
   background-color: #ffc800;
   color: #59656f;
 }
+
+.input {
+  position: relative;
+  width: 100%;
+}
+
+.olho {
+  color: var(--roxo);
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
