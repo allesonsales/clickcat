@@ -1,0 +1,57 @@
+[
+  {
+    "image": "https://i.imgur.com/mvUwtBo.jpg",
+    "nome": "Mingau",
+    "idade": 3,
+    "historia": "Mingau foi resgatado de um abrigo local quando ainda era filhote. Ele tem uma personalidade travessa e adora brincar com bolas de lã. Sua habilidade de saltar de um lugar para o outro é impressionante, e ele sempre encontra uma maneira de se meter em confusões.",
+    "caracteristicas": [
+      "Brincalhão",
+      "Curioso",
+      "Agitado"
+    ]
+  },
+  {
+    "image": "https://i.imgur.com/xTenbVP.jpg",
+    "nome": "Tigrão",
+    "idade": 5,
+    "historia": "Tigrão foi encontrado perdido na rua, com uma perna machucada. Após um tratamento e muito carinho, ele se recuperou completamente. Tigrão é calmo e adora passar horas deitado ao sol. Ele é o melhor amigo do cachorro da casa e sempre se coloca entre a família e qualquer perigo.",
+    "caracteristicas": [
+      "Calmo",
+      "Protetor",
+      "Sereno"
+    ]
+  },
+  {
+    "image": "https://i.imgur.com/ug3nTw5.jpg",
+    "nome": "Luna",
+    "idade": 2,
+    "historia": "Luna chegou à casa de sua dona após ser adotada de um centro de adoção. Ela é uma gata muito curiosa e exploradora, sempre se metendo em lugares pequenos e apertados. Luna adora ficar ao lado da janela, observando o movimento da rua.",
+    "caracteristicas": [
+      "Curiosa",
+      "Exploradora",
+      "Atenta"
+    ]
+  },
+  {
+    "image": "https://i.imgur.com/DXGvWHi.jpg",
+    "nome": "Felix",
+    "idade": 7,
+    "historia": "Felix foi adotado quando tinha 2 anos, após ser encontrado em uma praça. Ele é um gato muito independente e prefere ficar sozinho em momentos de descanso. Sua principal diversão é caçar passarinhos imaginários e perseguir sombras.",
+    "caracteristicas": [
+      "Independente",
+      "Tranquilo",
+      "Introspectivo"
+    ]
+  },
+  {
+    "image": "https://i.imgur.com/QwTJYuQ.jpg",
+    "nome": "Nina",
+    "idade": 4,
+    "historia": "Nina foi encontrada em uma fazenda e, logo que chegou à sua nova casa, demonstrou ser uma gata muito protetora. Ela gosta de manter sua família segura e tem um instinto forte de cuidar dos outros animais da casa. Sua expressão de alerta nunca passa despercebida.",
+    "caracteristicas": [
+      "Protetora",
+      "Atenta",
+      "Alerta"
+    ]
+  }
+]

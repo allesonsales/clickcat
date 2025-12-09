@@ -1,0 +1,48 @@
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttonContainer button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--roxo);
+  cursor: pointer;
+}
+
+.modalBackground {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.371);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background-color: #fafafa;
+  width: 20%;
+  height: 70%;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+#formulario img {
+  width: 150px;
+  height: 150px;
+  border: solid 5px var(--roxo);
+  border-radius: 50%;
+  object-fit: cover;
+}

@@ -1,0 +1,53 @@
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttonContainer button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--roxo);
+  cursor: pointer;
+}
+
+.modalBackground {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+}
+
+.modalBackground i {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  color: #fafafa;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.modalContent {
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 50%;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+#formulario {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}

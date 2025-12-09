@@ -1,0 +1,127 @@
+#card1,
+#card2,
+#card3 {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  height: 100%;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 4rem;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  color: #59656f;
+  font-size: 2rem;
+}
+
+.cardContentText {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #9c528b;
+}
+
+.cardTitle b {
+  color: #ffc800;
+}
+
+.adoto {
+  background-color: #9c528b;
+  border: none;
+  padding: 0.8rem;
+  width: 50%;
+  color: white;
+  font-family: "montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  cursor: pointer;
+  align-self: center;
+  border-radius: 35px;
+  transition: ease-in-out 0.2s;
+}
+
+.adoto:hover {
+  background-color: #ffc800;
+  color: #59656f;
+  transition: ease-in-out 0.2s;
+}
+
+.cardImage img {
+  width: 18rem;
+  transform: translateY(20%);
+}
+
+.cardNext {
+  align-content: center;
+}
+
+.cardNext .bi {
+  color: #9c528b;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.cardNext .bi:hover {
+  color: #ffc800;
+}
+
+.cardPrevious {
+  align-content: center;
+}
+
+.cardPrevious .bi {
+  color: #9c528b;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.cardPrevious .bi:hover {
+  color: #ffc800;
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .cardContent {
+    flex-direction: column;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .cardContentText {
+    width: fit-content;
+    gap: 0.5rem;
+  }
+
+  .cardContent img {
+    width: 15rem;
+  }
+
+  .cardTitle {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}

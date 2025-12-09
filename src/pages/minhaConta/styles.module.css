@@ -1,0 +1,74 @@
+.main {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.sectionUsuario {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--roxo);
+}
+
+.sectionUsuario img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: solid 5px var(--amarelo);
+  border-radius: 50%;
+}
+
+.sectionGatos {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.sectionGatos span {
+  width: 100%;
+  color: var(--roxo);
+}
+
+.sectionGatos ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.sectionGatos ul li {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--roxo-transparente);
+  padding: 1rem 0.5rem;
+  color: var(--roxo);
+}
+
+.sectionGatos ul li .containerLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.usuarioDados a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--roxo);
+}
+
+.stats {
+  text-decoration: none;
+  text-align: center;
+  border-bottom: none;
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 1rem 8rem;
+  }
+}

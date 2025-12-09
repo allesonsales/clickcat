@@ -1,0 +1,28 @@
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 5px;
+  z-index: 10000;
+  position: relative;
+  text-align: center;
+}
+
+.success {
+  background-color: #94efbd;
+  color: var(--roxo);
+}
+
+.error {
+  background-color: #ef9f94;
+  color: var(--roxo);
+}
+
+@media (orientation: landscape) {
+  .message {
+    width: 30%;
+  }
+}

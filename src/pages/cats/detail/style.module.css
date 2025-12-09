@@ -1,0 +1,109 @@
+.section {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.imageContainer img {
+  border: solid 2px var(--roxo);
+  border-radius: 15px;
+  width: 100%;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.catContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  color: var(--roxo);
+  width: 100%;
+}
+
+.catContainer p {
+  font-size: 0.9rem;
+}
+
+.flagContainer {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.flagContainer p {
+  font-size: 0.5rem;
+}
+
+.flag {
+  background-color: var(--roxo);
+  color: #fafafa;
+  border-radius: 5px;
+
+  text-align: center;
+  padding: 0.2rem;
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: solid 1px var(--amarelo);
+  margin-top: 1rem;
+}
+
+.section button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--roxo);
+  color: var(--amarelo);
+  font-size: 1.2rem;
+}
+
+@media (orientation: landscape) {
+  .section {
+    flex-direction: row;
+  }
+
+  .imageContainer {
+    width: 50%;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .imageContainer img {
+    height: 50%;
+    width: 50%;
+  }
+
+  .catContainer {
+    width: 50%;
+  }
+
+  .buttonContainer {
+    width: 25%;
+  }
+
+  .buttonContainer button {
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    text-shadow: 3px 3px 0px #00000055;
+    font-size: 2rem;
+    width: 75px;
+    height: 75px;
+  }
+
+  .buttonContainer button:hover {
+    font-size: 2.5rem;
+  }
+}

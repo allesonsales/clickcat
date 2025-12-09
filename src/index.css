@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --roxo: #9c528b;
+  --roxo-transparente: #f2dbeb;
+  --amarelo: #ffc800;
+  --erro: #e83333;
+}
+
+body {
+  margin: 0;
+  font-family: "montserrat", sans-serif;
+}
+section {
+  max-width: 100vw;
+}
