@@ -16,7 +16,7 @@ const MenuDesk = () => {
     <nav className="MenuDesk">
       <div className="menuContainer">
         <div className="logoContainer">
-          <img src="/clickcat/marca.svg" alt="" />
+          <img src="/marca.svg" alt="" />
         </div>
         <div className="MenuList">
           <Link to="/">Home</Link>

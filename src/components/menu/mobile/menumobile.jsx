@@ -13,7 +13,7 @@ const MenuMobile = () => {
 
   return (
     <nav className={styles.nav}>
-      <img src="/clickcat/marca.svg" alt="" />
+      <img src="/marca.svg" alt="" />
       <div className={styles.MenuMobile} onClick={toggleMenu}>
         {user?.foto && <img src={`${backend}/images/users/${user.foto}`}></img>}
         {mobile ? <i className="bi bi-x"></i> : <i className="bi bi-list"></i>}
