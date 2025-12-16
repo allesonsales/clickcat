@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <div className="app-container">
-        <Router basename="/clickcat">
+        <Router>
           <UserProvider>
             <CatProvider>
               {isMobile ? <MenuMobile /> : <MenuDesk />}
