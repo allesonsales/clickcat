@@ -39,7 +39,7 @@ const Card1 = ({ nome }) => {
             </div>
           </div>
           <div className="cardImage">
-            <img src="/clickcat/cat1.svg" alt="" />
+            <img src="/cat1.svg" alt="" />
           </div>
         </div>
         <div className="cardNext" onClick={toggle}>
