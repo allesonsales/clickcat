@@ -20,7 +20,7 @@ function useAuth() {
 
       console.log(data);
       setFlashMessage(msgTxt, msgType);
-      navigate("/clickcat");
+      navigate("/");
       return data;
     } catch (error) {
       const data = error.response.data;
@@ -41,7 +41,7 @@ function useAuth() {
       navigate("/cats");
 
       setFlashMessage(data.message, "success");
-      console.log(data);
+      console.log("logar", data);
       return data;
     } catch (error) {
       const data = error.response.data;
@@ -109,6 +109,7 @@ function useAuth() {
       const data = res.data;
       setFlashMessage(data.message, "success");
       console.log(data);
+      return data;
     } catch (error) {
       const data = error.response.data;
       setFlashMessage(data.message, "error");

@@ -14,7 +14,6 @@ function Registrar() {
   const { handleRegistrar } = useContext(Context);
 
   function handleSubmit(e) {
-    console.log("Enviou");
     e.preventDefault();
 
     const usuario = {
@@ -25,7 +24,6 @@ function Registrar() {
       senha,
       confirmarSenha,
     };
-    console.log(usuario);
 
     if (senha.length < 6) {
       setErro("tamanhoSenha");
@@ -131,7 +129,7 @@ function Registrar() {
                     : "bi bi-eye-fill"
                 } ${styles.olho}`}
                 onClick={() => {
-                  if (verSenha == null) {
+                  if (verSenha == null || verSenha == "mostrarConfirmacao") {
                     setVerSenha(`mostrarSenha`);
                   } else if (verSenha == `mostrarSenha`) {
                     setVerSenha(null);
@@ -166,7 +164,7 @@ function Registrar() {
                     : "bi bi-eye-fill"
                 } ${styles.olho}`}
                 onClick={() => {
-                  if (verSenha == null) {
+                  if (verSenha == null || verSenha == "mostrarSenha") {
                     setVerSenha(`mostrarConfirmacao`);
                   } else if (verSenha == `mostrarConfirmacao`) {
                     setVerSenha(null);

@@ -7,15 +7,13 @@ const Context = createContext();
 function UserProvider({ children }) {
   const [user, setUser] = useState(null);
   const [isAutenticado, setIsAutenticado] = useState(false);
-  const [senha, setSenha] = useState(null);
+  const [senha, setSenha] = useState("");
 
   useEffect(() => {
     async function verificarLogin() {
       try {
         const res = await api.get("/users/check", { withCredentials: true });
         const data = res.data;
-
-        console.log("veriificar", res);
 
         if (res.status === 200) {
           setIsAutenticado(true);
@@ -24,7 +22,7 @@ function UserProvider({ children }) {
           setIsAutenticado(false);
         }
       } catch (err) {
-        console.log(err);
+        console.error(err);
       }
     }
 
@@ -46,26 +44,20 @@ function UserProvider({ children }) {
     const data = await logar(dados);
 
     if (!data) {
-      console.log(data.message);
       return;
     }
-
-    console.log("Login realizado:", data);
     setUser(data.user);
-    console.log("usuario login", user);
     setIsAutenticado(true);
-    localStorage.setItem("user", user);
+    localStorage.setItem("user", JSON.stringify(user));
   }
 
   async function handleRegistrar(dados) {
     const data = await registrar(dados);
 
     if (!data) {
-      console.log(data.message);
       return;
     }
 
-    console.log("Registrado", data);
     setIsAutenticado(true);
     setUser(data.user);
   }
@@ -73,19 +65,25 @@ function UserProvider({ children }) {
   async function handleAtualizar(dados) {
     const data = await atualizar(user.id, dados);
 
-    console.log("atualizado", data);
+    if (!data) {
+      return;
+    }
   }
 
   async function handleAtualizarSenha(dados) {
     const data = await atualizarSenha(user.id, dados);
 
-    console.log("senha atualizada", data);
+    if (!data) {
+      return;
+    }
   }
 
   async function handleAtualizarEmail(dados) {
     const data = await atualizarEmail(user.id, dados);
 
-    console.log("email atualizado", data);
+    if (!data) {
+      return;
+    }
   }
 
   async function handleExcluirConta() {
@@ -96,13 +94,14 @@ function UserProvider({ children }) {
       return;
     }
 
+    await logoutFunction();
+
     setIsAutenticado(false);
     setUser(null);
   }
 
   async function handleLogout() {
     const data = await logoutFunction();
-    console.log("Logout");
 
     if (!data) {
       return;

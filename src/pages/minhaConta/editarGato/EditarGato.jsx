@@ -63,8 +63,6 @@ function EditarGato() {
       formData.append("fotos", arquivo);
     }
 
-    console.log(formData);
-
     handleAtualizar(cat._id, formData);
   }
 

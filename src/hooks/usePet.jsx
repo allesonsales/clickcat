@@ -11,7 +11,6 @@ function usePet() {
 
       const data = await res.data;
       setFlashMessage(data.message, "success");
-      console.log(data);
       return data;
     } catch (err) {
       const msg =
@@ -42,12 +41,10 @@ function usePet() {
         withCredentials: true,
       });
       const data = res.data;
-
-      console.log(data);
       setFlashMessage(data.message, "success");
       return data;
     } catch (err) {
-      console.log(err);
+      console.error(err);
       setFlashMessage(err.message, "error");
     }
   }
@@ -57,10 +54,9 @@ function usePet() {
       const res = await api.delete(`pets/${pet}`, { withCredentials: true });
       const data = res.data;
       setFlashMessage(data.message, `success`);
-      console.log(data);
     } catch (err) {
-      console.log(err);
-      console.log(err.message);
+      console.error(err);
+      console.error(err.message);
     }
   }
 
@@ -77,8 +73,8 @@ function usePet() {
       setFlashMessage(data.message, `success`);
     } catch (err) {
       const msg = err.response.data.message;
-      console.log(err);
-      console.log(err.message);
+      console.error(err);
+      console.error(err.message);
       setFlashMessage(msg, "error");
     }
   }
@@ -94,7 +90,7 @@ function usePet() {
       setFlashMessage(data.message, `success`);
     } catch (err) {
       const message = err.data.message;
-      console.log(message);
+      console.error(message);
     }
   }
 

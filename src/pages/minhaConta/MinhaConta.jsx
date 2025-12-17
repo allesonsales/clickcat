@@ -20,7 +20,6 @@ function MinhaConta() {
     setMeusGatos(data);
     setNaoAdotados(data.filter((gato) => gato.adotado === false));
     setAdotados(data.filter((gato) => gato.adotado === true));
-    console.log(data);
   }
   async function excluir(id) {
     await handleExcluir(id);

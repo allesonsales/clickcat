@@ -39,8 +39,6 @@ const Doar = () => {
     formData.append("historia", historia);
     formData.append("temperamento", JSON.stringify(temperamento));
 
-    console.log(formData);
-
     handleCadastrar(formData);
 
     navigate("/cats");

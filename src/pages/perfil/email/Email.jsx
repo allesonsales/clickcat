@@ -12,7 +12,6 @@ function Email({ fecharModal }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log("chamou");
 
     const dados = {
       emailAntigo,

@@ -13,8 +13,8 @@ import Perfil from "./pages/perfil/perfil";
 import MinhaConta from "./pages/minhaConta/MinhaConta";
 import EditarGato from "./pages/minhaConta/editarGato/EditarGato";
 
-const AppRoute = ({ nome }) => {
-  const { user } = useContext(Context);
+const AppRoute = () => {
+  const { user, isAutenticado } = useContext(Context);
 
   return (
     <Routes>
@@ -47,7 +47,10 @@ const AppRoute = ({ nome }) => {
           </PrivateRoute>
         }
       />
-      <Route path="/registrar" element={<Registrar />} />
+      <Route
+        path="/registrar"
+        element={isAutenticado ? <MinhaConta /> : <Registrar />}
+      />
       <Route path="/login" element={<Login />} />
     </Routes>
   );

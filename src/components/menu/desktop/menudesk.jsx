@@ -2,15 +2,10 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import { useContext } from "react";
 import { Context } from "../../../context/UserContext";
-import { useEffect } from "react";
 
 const MenuDesk = () => {
   const { isAutenticado, handleLogout, user } = useContext(Context);
   const backend = import.meta.env.VITE_BACKEND_API;
-
-  useEffect(() => {
-    console.log(`Usuário`, user);
-  }, [user]);
 
   return (
     <nav className="MenuDesk">

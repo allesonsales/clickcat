@@ -51,3 +51,20 @@
   justify-content: space-evenly;
   height: 100%;
 }
+
+.input {
+  position: relative;
+  width: 100%;
+}
+
+.input i {
+  display: flex;
+  align-items: center;
+  color: var(--roxo);
+  font-size: 1.2rem;
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  z-index: 400;
+  cursor: pointer;
+}

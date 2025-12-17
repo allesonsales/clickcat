@@ -23,6 +23,15 @@
   border-radius: 50%;
 }
 
+.sectionUsuario i {
+  width: 80px;
+  height: 80px;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .sectionGatos {
   display: flex;
   justify-content: center;
@@ -50,6 +59,7 @@
   background-color: var(--roxo-transparente);
   padding: 1rem 0.5rem;
   color: var(--roxo);
+  min-width: 200px;
 }
 
 .sectionGatos ul li .containerLinks {
@@ -59,6 +69,13 @@
   gap: 1rem;
 }
 
+.sectionGatos ul li .containerLinks a,
+.sectionGatos ul li .containerLinks i {
+  text-decoration: none;
+  color: var(--roxo);
+  cursor: pointer;
+}
+
 .sectionGatos button {
   background-color: var(--amarelo);
   border: none;
@@ -66,6 +83,7 @@
   border-radius: 5px;
   padding: 0.5rem;
   width: 50%;
+  cursor: pointer;
 }
 
 .usuarioDados a {

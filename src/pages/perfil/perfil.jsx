@@ -35,10 +35,7 @@ function Perfil() {
       setNomeUsuario(data.nomeUsuario);
       setEmail(data.email);
       setTelefone(data.telefone);
-      console.log("res", data);
     }
-
-    console.log(user);
 
     buscarDados();
   }, [user]);

@@ -14,10 +14,6 @@ function CatDetail() {
 
   const backend = import.meta.env.VITE_BACKEND_API;
 
-  useEffect(() => {
-    console.log(cat);
-  }, []);
-
   if (!cat) return <p>Nenhum gato selecionado.</p>;
 
   return (

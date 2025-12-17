@@ -4,10 +4,10 @@ import { Context } from "../../../context/UserContext";
 
 function Excluir({ fecharModal }) {
   const { setSenha, handleExcluirConta } = useContext(Context);
+  const [verSenha, setVerSenha] = useState(null);
 
   async function handleSubmit(e) {
     e.preventDefault();
-
     handleExcluirConta();
   }
   return (
@@ -18,12 +18,28 @@ function Excluir({ fecharModal }) {
           <form id={styles.formulario} onSubmit={handleSubmit}>
             <div className="formContent">
               <label>Digite sua senha:</label>
-              <input
-                type="text"
-                id="senha"
-                aria-label="senha"
-                onChange={(e) => setSenha(e.target.value)}
-              />
+              <div className={styles.input}>
+                <input
+                  type={verSenha == "mostrarSenha" ? "text" : "password"}
+                  id="senha"
+                  aria-label="senha"
+                  onChange={(e) => setSenha(e.target.value)}
+                />
+                <i
+                  className={`${
+                    verSenha === `mostrarSenha`
+                      ? "bi bi-eye-slash-fill"
+                      : "bi bi-eye-fill"
+                  } ${styles.olho}`}
+                  onClick={() => {
+                    if (verSenha == null) {
+                      setVerSenha(`mostrarSenha`);
+                    } else {
+                      setVerSenha(null);
+                    }
+                  }}
+                ></i>
+              </div>
             </div>
             <button className="cadastrar" type="submit">
               Excluir

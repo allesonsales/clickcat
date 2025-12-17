@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import styles from "./styles.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CatContext } from "../../context/CatContext";
 import usePet from "../../hooks/usePet";
 import api from "../../utils/api";
@@ -8,9 +8,7 @@ import api from "../../utils/api";
 function Cats() {
   const [pets, setPets] = useState([]);
   const { converterIdade } = usePet();
-  const { cat, setCat } = useContext(CatContext);
-
-  const navigate = useNavigate();
+  const { setCat } = useContext(CatContext);
 
   const ambiente = import.meta.env.VITE_BACKEND_API;
 
@@ -18,7 +16,6 @@ function Cats() {
     const res = await api.get("/pets", { withCredentials: true });
     const data = res.data;
     setPets(data);
-    console.log(data);
   }
 
   useEffect(() => {
@@ -27,6 +24,7 @@ function Cats() {
 
   return (
     <section className={styles.section}>
+      {pets.length == 0 && <span>Ainda não existe nenhum pet cadastrado!</span>}
       <ul className={styles.ul}>
         {pets &&
           pets.map((cat, index) => {
@@ -38,7 +36,7 @@ function Cats() {
                     src={
                       cat.fotos && cat.fotos.length > 0
                         ? `${ambiente}/images/pets/${cat.fotos[0]}`
-                        : "/clickcat/avatar.png"
+                        : "/avatar.png"
                     }
                     alt=""
                   />
