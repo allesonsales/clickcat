@@ -24,7 +24,7 @@ function CatDetail() {
             src={
               cat.fotos && cat.fotos.length > 0
                 ? `${backend}/images/pets/${cat.fotos[0]}`
-                : "/clickcat/avatar.png"
+                : "/avatar.png"
             }
             alt=""
           />
