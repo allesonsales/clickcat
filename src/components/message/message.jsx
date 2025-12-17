@@ -9,7 +9,6 @@ function Message() {
 
   useEffect(() => {
     const handleFlash = ({ message, type }) => {
-      console.log("Recebido:", message, type);
       setMessage(message);
       setType(type);
       setVisibility(true);

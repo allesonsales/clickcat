@@ -18,7 +18,6 @@ function useAuth() {
 
       const data = await res.data;
 
-      console.log(data);
       setFlashMessage(msgTxt, msgType);
       navigate("/");
       return data;
@@ -41,7 +40,6 @@ function useAuth() {
       navigate("/cats");
 
       setFlashMessage(data.message, "success");
-      console.log("logar", data);
       return data;
     } catch (error) {
       const data = error.response.data;
@@ -74,7 +72,6 @@ function useAuth() {
 
       const data = res.data;
       setFlashMessage(data.message, "success");
-      console.log(data);
     } catch (error) {
       const data = error.response.data;
       setFlashMessage(data.message, "error");
@@ -91,7 +88,6 @@ function useAuth() {
 
       const data = res.data;
       setFlashMessage(data.message, "success");
-      console.log(data);
     } catch (error) {
       const data = error.response.data;
       setFlashMessage(data.message, "error");
@@ -108,7 +104,6 @@ function useAuth() {
       });
       const data = res.data;
       setFlashMessage(data.message, "success");
-      console.log(data);
       return data;
     } catch (error) {
       const data = error.response.data;
@@ -123,7 +118,6 @@ function useAuth() {
 
     const data = res.data;
 
-    console.log(data);
     setFlashMessage(data.message, "success");
     navigate("/login");
     return data;
