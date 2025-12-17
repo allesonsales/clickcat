@@ -14,6 +14,16 @@
   margin-bottom: 1rem;
 }
 
+.vazio {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--roxo);
+  text-align: center;
+}
+
 .ul li {
   border: solid 1px var(--roxo);
   padding: 0.5rem;
