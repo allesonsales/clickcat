@@ -64,7 +64,7 @@
 
   .ul li {
     flex-direction: column;
-    width: 20%;
+    min-width: 20%;
   }
 
   .caracteristicas {
