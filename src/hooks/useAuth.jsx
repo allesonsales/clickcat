@@ -113,7 +113,7 @@ function useAuth() {
   }
 
   async function logoutFunction() {
-    const res = await api.post("/users/logout", { withCredentials: true });
+    const res = await api.post("/users/logout", {}, { withCredentials: true });
 
     const data = res.data;
 

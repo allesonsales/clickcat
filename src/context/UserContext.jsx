@@ -23,9 +23,12 @@ function UserProvider({ children }) {
           setUser(data.user);
         } else {
           setIsAutenticado(false);
+          setUser(null);
         }
       } catch (err) {
-        console.error(err);
+        setUser(null);
+        setIsAutenticado(false);
+        console.error("Erro ao verificar login:", err);
       }
     }
 
