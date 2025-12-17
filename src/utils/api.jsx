@@ -1,6 +1,7 @@
 import axios from "axios";
+const ambiente = import.meta.env.VITE_BACKEND_API;
 
 export default axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: `${ambiente}`,
   withCredentials: true,
 });
