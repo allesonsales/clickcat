@@ -19,7 +19,6 @@ function useAuth() {
       const data = await res.data;
 
       setFlashMessage(msgTxt, msgType);
-      navigate("/");
       return data;
     } catch (error) {
       const data = error.response.data;

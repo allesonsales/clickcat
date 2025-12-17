@@ -24,12 +24,11 @@ function Cats() {
 
   return (
     <section className={styles.section}>
-      {pets.length == 0 ||
-        (!pets && (
-          <span className={styles.vazio}>
-            Ainda não existe nenhum pet cadastrado!
-          </span>
-        ))}
+      {pets.length == 0 && (
+        <span className={styles.vazio}>
+          Ainda não existe nenhum pet cadastrado!
+        </span>
+      )}
       <ul className={styles.ul}>
         {pets &&
           pets.map((cat, index) => {

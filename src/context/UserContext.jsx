@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import api from "../utils/api";
+import { useNavigate } from "react-router-dom";
 
 const Context = createContext();
 
@@ -8,6 +9,8 @@ function UserProvider({ children }) {
   const [user, setUser] = useState(null);
   const [isAutenticado, setIsAutenticado] = useState(false);
   const [senha, setSenha] = useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function verificarLogin() {
@@ -60,6 +63,8 @@ function UserProvider({ children }) {
 
     setIsAutenticado(true);
     setUser(data.user);
+
+    navigate("/");
   }
 
   async function handleAtualizar(dados) {
