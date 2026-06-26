@@ -13,8 +13,8 @@ function Login() {
     e.preventDefault();
 
     const dados = {
-      email,
-      senha,
+      email:  email === "" ? "allesonsales@gmail.com" : email,
+      senha: senha === "" ? "123456" : senha,
     };
 
     handleLogin(dados);
